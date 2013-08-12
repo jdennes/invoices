@@ -1,3 +1,4 @@
+#encoding: utf-8
 require 'date'
 
 desc "Generate your invoice for the current month"
@@ -11,7 +12,7 @@ task :invoice do
     "_posts",
     last.strftime('%Y-%m-%d-invoice.markdown'))
 
-  monthly_data = 
+  monthly_data =
 "---
 layout:         post
 title:          \"Invoice – #{last.strftime('%B, %Y')}\"
