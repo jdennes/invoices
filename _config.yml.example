@@ -7,7 +7,6 @@ person_github: https://github.com/username
 person_monthly_salary: 100.00
 person_monthly_phone_reimbursement: 1.00
 person_payment_info: |
-  __Account Name:__ Your name  
-  __SWIFT Code:__ BLAH  
-  
-  etc...  
+  __Account Name:__ Your name \\
+  __SWIFT Code:__ blah \\
+  __Something else: blah
