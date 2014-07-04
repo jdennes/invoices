@@ -26,5 +26,5 @@ invoice_template = File.open(
 
 # Glue the monthly data and the invoice template together, and save
 # the invoice.
-File.open(filename, 'w') { |f| f.write(monthly_data + invoice_template) }
+File.open(filename, "w") { |f| f.write(monthly_data + invoice_template) }
 p "Generated your monthly invoice. Saved to: #{filename}"

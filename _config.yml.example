@@ -5,6 +5,7 @@ person_title: Hubbernaut
 person_email: username@github.com
 person_website: http://example.com
 person_github: https://github.com/username
+person_currency: EUR
 person_monthly_salary: 100.00
 person_monthly_phone_reimbursement: 1.00
 person_payment_info: |

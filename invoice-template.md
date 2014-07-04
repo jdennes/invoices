@@ -13,9 +13,9 @@ __For period:__ {{ page.period }}
 
 |__Description__|__Amount__|
 |--|--:|
-|Monthly Salary|${{site.person_monthly_salary}}|
-|Cell Phone Reimbursement|${{site.person_monthly_phone_reimbursement}}|
-|__Total:__|${{site.person_monthly_salary | plus: site.person_monthly_phone_reimbursement}}|
+|Monthly Salary|{{site.person_monthly_salary}} {{site.person_currency}}|
+|Cell Phone Reimbursement|{{site.person_monthly_phone_reimbursement}} {{site.person_currency}}|
+|__Total:__|{{site.person_monthly_salary | plus: site.person_monthly_phone_reimbursement}} {{site.person_currency}}|
 
 ## Bank/Wire Information
 
