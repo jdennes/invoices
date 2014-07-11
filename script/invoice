@@ -2,9 +2,12 @@
 #encoding: utf-8
 require "date"
 
-now  = DateTime.now
-# Find the last day in the current month
-last = DateTime.civil now.year, now.month, -1
+gen_date = DateTime.now
+if ARGV.length == 1
+  gen_date = DateTime.parse ARGV[0]
+end
+# Find the last day in the month for the date the invoice is being generated
+last = DateTime.civil gen_date.year, gen_date.month, -1
 
 filename = File.join(
   Dir.pwd,
