@@ -33,6 +33,13 @@ To use this yourself, fork and clone, then follow these instructions:
   "Generated your monthly invoice. Saved to /Users/you/invoices/_posts/2013-05-31-invoice.markdown"
   ```
 
+  You can also create an invoice for a specific date by passing the date as an argument to `script/invoice`:
+
+  ```sh
+  $ script/invoice 2018-08-20
+  "Generated your monthly invoice. Saved to /Users/you/invoices/_posts/2018-08-31-invoice.markdown"
+  ```
+
   If you visit [http://localhost:4000](http://localhost:4000) now, you should see your generated invoice listed there.
 
   Click it to view it, then PDF it and email it!
