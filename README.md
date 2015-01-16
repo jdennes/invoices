@@ -48,6 +48,10 @@ To use this yourself, fork and clone, then follow these instructions:
 
   If you visit [http://localhost:4000](http://localhost:4000) now, you should see your generated invoice listed there.
 
-  You'll find PDF version of your invoice saved in the directory mentioned in the output of `script/invoice`.
+  Or you'll find the PDF version of your invoice saved in `_posts/_pdfs`:
+
+  ```sh
+  $ open /Users/jdennes/projects/invoices/_posts/_pdfs/2015-01-31-invoice.pdf
+  ```
 
 That's it!
