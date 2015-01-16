@@ -11,12 +11,11 @@ __For period:__ {{ page.period }}
 
 ## Service Fee Amounts
 
+{% assign total = 0 %}
 |__Description__|__Amount__|
-|--|--:|
-|Monthly Salary|{{site.person_monthly_salary}} {{site.person_currency}}|
-|Insurance Stipend|{{site.person_monthly_insurance_stipend}} {{site.person_currency}}|
-|Cell Phone Reimbursement|{{site.person_monthly_phone_reimbursement}} {{site.person_currency}}|
-|__Total:__|{{site.person_monthly_salary | plus: site.person_monthly_insurance_stipend | plus: site.person_monthly_phone_reimbursement}} {{site.person_currency}}|
+|--|--:|{% for item in site.invoice_line_items %}{% assign total = total | plus:item.value %}
+|{{item.title}}|{{item.value}} {{site.person_currency}}|{% endfor %}
+|__Total:__|{{total}} {{site.person_currency}}|
 
 ## Bank/Wire Information
 

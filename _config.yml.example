@@ -6,9 +6,13 @@ person_email: username@github.com
 person_website: http://example.com
 person_github: https://github.com/username
 person_currency: EUR
-person_monthly_salary: 100.00
-person_monthly_insurance_stipend: 10.00
-person_monthly_phone_reimbursement: 1.00
+invoice_line_items:
+  - title: Monthly Salary
+    value: 100.00
+  - title: Insurance Stipend
+    value: 10.00
+  - title: Cell Phone Reimbursement
+    value: 1.00
 person_payment_info: |
   __Account Name:__ Your name \\
   __SWIFT Code:__ blah \\
