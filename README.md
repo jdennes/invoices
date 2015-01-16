@@ -10,7 +10,7 @@ To use this yourself, fork and clone, then follow these instructions:
   $ script/setup
   ```
 
-2. Create your own `_config.yml` file (this will contain sensitive information and is included in `.gitignore`):
+2. Create your own `_config.yml` file (this will contain sensitive information and is included in `.gitignore`, as is the `_posts` directory where your invoices will exist):
 
   ```sh
   $ cp _config.yml.example _config.yml
