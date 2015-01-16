@@ -52,5 +52,5 @@ kit.stylesheets << stylesheet
 kit.to_file pdf_filename
 
 p "Generated your monthly invoice."
-p "HTML file saved to: #{filename}"
-p "PDF file saved to: #{pdf_filename}"
+p "Markdown file saved to: #{filename}"
+p "PDF file saved to:      #{pdf_filename}"

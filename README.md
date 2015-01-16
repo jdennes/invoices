@@ -26,22 +26,28 @@ To use this yourself, fork and clone, then follow these instructions:
 
   That starts the app at [http://localhost:4000](http://localhost:4000). You probably won't see any invoices there yet though.
 
-4. Create an invoice for the current month.
+4. Create an invoice:
+
+  Without any arguments, this creates you an invoice for the current month:
 
   ```sh
   $ script/invoice
-  "Generated your monthly invoice. Saved to /Users/you/invoices/_posts/2013-05-31-invoice.markdown"
+  "Generated your monthly invoice."
+  "Markdown file saved to: /Users/jdennes/projects/invoices/_posts/2015-01-31-invoice.markdown"
+  "PDF file saved to:      /Users/jdennes/projects/invoices/_posts/_pdfs/2015-01-31-invoice.pdf"
   ```
 
   You can also create an invoice for a specific date by passing the date as an argument to `script/invoice`:
 
   ```sh
   $ script/invoice 2018-08-20
-  "Generated your monthly invoice. Saved to /Users/you/invoices/_posts/2018-08-31-invoice.markdown"
+  "Generated your monthly invoice."
+  "Markdown file saved to: /Users/jdennes/projects/invoices/_posts/2018-08-20-invoice.markdown"
+  "PDF file saved to:      /Users/jdennes/projects/invoices/_posts/_pdfs/2018-08-20-invoice.pdf"
   ```
 
   If you visit [http://localhost:4000](http://localhost:4000) now, you should see your generated invoice listed there.
 
-  Click it to view it, then PDF it and email it!
+  You'll find PDF version of your invoice saved in the directory mentioned in the output of `script/invoice`.
 
 That's it!
