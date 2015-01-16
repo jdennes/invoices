@@ -37,10 +37,10 @@ invoice_template = File.open(
 # Glue the monthly data and the invoice template together, and save the invoice.
 File.open(filename, "w") { |f| f.write(monthly_data + invoice_template) }
 
-# Build the site
+# Build the site to include the new invoice
 system "bundle exec jekyll build --safe"
 
-# Generate a PDF from the generate HTML
+# Generate a PDF from the generated HTML file
 generated_filename = File.join(
   Dir.pwd, "_site",
   filename.split("/").last.gsub("-", "/").gsub("markdown", "html"))
