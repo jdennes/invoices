@@ -10,7 +10,7 @@ To use this yourself, fork and clone, then follow these instructions:
   $ script/setup
   ```
 
-2. Create your own `_config.yml` file.
+2. Create your own `_config.yml` file (this will contain sensitive information and is included in `.gitignore`):
 
   ```sh
   $ cp _config.yml.example _config.yml
@@ -24,9 +24,9 @@ To use this yourself, fork and clone, then follow these instructions:
   $ script/server
   ```
 
-  That starts the app at [http://localhost:4000](http://localhost:4000). You probably won't see any invoices there yet though.
+  That starts the app at [http://localhost:4000](http://localhost:4000). You shouldn't see any invoices there yet though.
 
-4. Create an invoice:
+4. Generate an invoice:
 
   Without any arguments, this creates you an invoice for the current month:
 
