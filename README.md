@@ -16,7 +16,7 @@ To use this yourself, fork and clone, then follow these instructions:
   $ cp _config.yml.example _config.yml
   ```
 
-  Edit your `_config.yml` file. Everything should be pretty obvious.
+  Edit your `_config.yml` file. Edit and add as many `invoice_line_items` as you like.
 
 3. Run the app:
 
