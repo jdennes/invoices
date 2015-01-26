@@ -1,5 +1,5 @@
 
-# {{page.title }}
+# {{page.title}} <a class="pdf-link" href="{{page.pdf_url}}" target="_blank"><span class="mega-octicon octicon-file-pdf"></span></a>
 
 This invoice is for work performed by _{{site.person_name}}_ as a
 _{{site.person_title}}_ for GitHub.

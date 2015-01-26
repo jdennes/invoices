@@ -10,7 +10,7 @@ To use this yourself, fork and clone, then follow these instructions:
   $ script/setup
   ```
 
-2. Create your own `_config.yml` file (this will contain sensitive information and is included in `.gitignore`, as is the `_posts` directory where your invoices will exist):
+2. Create your own `_config.yml` file. This will contain sensitive information and is included in `.gitignore`, along with `_posts` and `pdfs`, where your invoices will exist.
 
   ```sh
   $ cp _config.yml.example _config.yml
@@ -34,7 +34,7 @@ To use this yourself, fork and clone, then follow these instructions:
   $ script/invoice
   "Generated your monthly invoice."
   "Markdown file saved to: /Users/jdennes/projects/invoices/_posts/2015-01-31-invoice.markdown"
-  "PDF file saved to:      /Users/jdennes/projects/invoices/_posts/_pdfs/2015-01-31-invoice.pdf"
+  "PDF file saved to:      /Users/jdennes/projects/invoices/pdfs/2015-01-31-invoice.pdf"
   ```
 
   You can also create an invoice for a specific date by passing the date as an argument to `script/invoice`:
@@ -43,15 +43,15 @@ To use this yourself, fork and clone, then follow these instructions:
   $ script/invoice 2018-08-20
   "Generated your monthly invoice."
   "Markdown file saved to: /Users/jdennes/projects/invoices/_posts/2018-08-20-invoice.markdown"
-  "PDF file saved to:      /Users/jdennes/projects/invoices/_posts/_pdfs/2018-08-20-invoice.pdf"
+  "PDF file saved to:      /Users/jdennes/projects/invoices/pdfs/2018-08-20-invoice.pdf"
   ```
 
-  If you visit [http://localhost:4000](http://localhost:4000) now, you'll see your generated invoice listed there.
+  If you visit [http://localhost:4000](http://localhost:4000) now, you'll see your generated invoice listed there. Click on the invoice to see it in full, including a link to the generated PDF file.
 
-  And you'll find the PDF version of your invoice saved in `_posts/_pdfs`:
+  You'll find the PDF file of your invoice saved in the `pdfs` directory:
 
   ```sh
-  $ open /Users/jdennes/projects/invoices/_posts/_pdfs/2015-01-31-invoice.pdf
+  $ open /Users/jdennes/projects/invoices/pdfs/2015-01-31-invoice.pdf
   ```
 
 That's it!
