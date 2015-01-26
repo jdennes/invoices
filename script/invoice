@@ -15,7 +15,7 @@ last = DateTime.civil gen_date.year, gen_date.month, -1
 filename = File.join(Dir.pwd, "_posts", last.strftime("%Y-%m-%d-invoice.markdown"))
 
 # Set the filename for the invoice's PDF file
-pdfs_dir = File.join(Dir.pwd, "_posts", "_pdfs")
+pdfs_dir = File.join(Dir.pwd, "pdfs")
 unless File.directory?(pdfs_dir)
   FileUtils.mkdir_p(pdfs_dir)
 end
