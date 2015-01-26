@@ -28,7 +28,7 @@ title:          \"Invoice – #{last.strftime('%B, %Y')}\"
 date:           #{last.strftime('%Y-%m-%d 10:00:00')}
 invoice_number: \"#{last.strftime('%Y%m-GITHUB')}\"
 period:         \"#{last.strftime('%B, %Y')}\"
-pdf_url:       \"/pdfs/#{last.strftime("%Y-%m-%d-invoice.pdf")}\"
+pdf_url:        \"/pdfs/#{last.strftime("%Y-%m-%d-invoice.pdf")}\"
 ---
 "
 
