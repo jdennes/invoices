@@ -1,5 +1,5 @@
 
-# {{page.title }}
+# {{page.title}}
 
 This invoice is for work performed by _{{site.person_name}}_ as a
 _{{site.person_title}}_ for GitHub.
