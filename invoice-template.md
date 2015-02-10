@@ -14,9 +14,9 @@ __For period:__ {{ page.period }}
 {% assign total = 0 %}
 |__Description__|__Amount__|
 |--|--:|{% for item in site.invoice_line_items %}{% assign total = total | plus:item.value %}
-|{{item.title}}|{{item.value}} {{site.person_currency}}|{% endfor %}
-|__Total:__|{{total}} {{site.person_currency}}|
+|{{item.title}}|{{item.value}} {{site.invoice_currency}}|{% endfor %}
+|__Total:__|{{total}} {{site.invoice_currency}}|
 
 ## Bank/Wire Information
 
-{{site.person_payment_info}}
+{{site.invoice_payment_info}}
