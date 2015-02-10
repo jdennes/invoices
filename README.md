@@ -16,7 +16,7 @@ To use this yourself, fork and clone, then follow these instructions:
   $ cp _config.yml.example _config.yml
   ```
 
-  Edit your `_config.yml` file. Edit and add as many `invoice_line_items` as you like.
+  Edit your `_config.yml` file. Edit and add as many `invoice_line_items` as you like. The `invoice_currency`, `invoice_line_items`, and `invoice_payment_info` values are set for each invoice, so you can change them in future without old invoices being affected.
 
 3. Run the app:
 
