@@ -3,6 +3,7 @@
 require "date"
 require "fileutils"
 require "pdfkit"
+require "psych"
 
 gen_date = DateTime.now
 if ARGV.length == 1
@@ -21,14 +22,21 @@ unless File.directory?(pdfs_dir)
 end
 pdf_filename = File.join(pdfs_dir, last.strftime("%Y-%m-%d-invoice.pdf"))
 
+invoice_data = Psych.load_file(File.join(Dir.pwd, "_config.yml"))
+invoice_line_items = Psych.dump(invoice_data["invoice_line_items"], :indentation => 2).gsub "---\n", ""
+invoice_payment_info = Psych.dump(invoice_data["invoice_payment_info"], :indentation => 2).gsub "---", ""
 monthly_data =
 "---
-layout:         post
-title:          \"Invoice – #{last.strftime('%B, %Y')}\"
-date:           #{last.strftime('%Y-%m-%d 10:00:00')}
+layout: post
+title: \"Invoice – #{last.strftime('%B, %Y')}\"
+date: #{last.strftime('%Y-%m-%d 10:00:00')}
 invoice_number: \"#{last.strftime('%Y%m-GITHUB')}\"
-period:         \"#{last.strftime('%B, %Y')}\"
-pdf_url:        \"/pdfs/#{last.strftime("%Y-%m-%d-invoice.pdf")}\"
+period: \"#{last.strftime('%B, %Y')}\"
+pdf_url: \"/pdfs/#{last.strftime("%Y-%m-%d-invoice.pdf")}\"
+invoice_currency: #{invoice_data["invoice_currency"]}
+invoice_line_items:
+#{invoice_line_items}
+invoice_payment_info:#{invoice_payment_info}
 ---
 "
 
