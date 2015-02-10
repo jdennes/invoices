@@ -5,7 +5,7 @@ person_title: Hubbernaut
 person_email: username@github.com
 person_website: http://example.com
 person_github: https://github.com/username
-person_currency: EUR
+invoice_currency: EUR
 invoice_line_items:
   - title: Monthly Salary
     value: 100.00
@@ -13,7 +13,7 @@ invoice_line_items:
     value: 10.00
   - title: Cell Phone Reimbursement
     value: 1.00
-person_payment_info: |
+invoice_payment_info: |
   __Account Name:__ Your name \\
   __SWIFT Code:__ blah \\
   __Something else:__ blah

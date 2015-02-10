@@ -13,10 +13,10 @@ __For period:__ {{ page.period }}
 
 {% assign total = 0 %}
 |__Description__|__Amount__|
-|--|--:|{% for item in site.invoice_line_items %}{% assign total = total | plus:item.value %}
-|{{item.title}}|{{item.value}} {{site.person_currency}}|{% endfor %}
-|__Total:__|{{total}} {{site.person_currency}}|
+|--|--:|{% for item in page.invoice_line_items %}{% assign total = total | plus:item.value %}
+|{{item.title}}|{{item.value}} {{page.invoice_currency}}|{% endfor %}
+|__Total:__|{{total}} {{page.invoice_currency}}|
 
 ## Bank/Wire Information
 
-{{site.person_payment_info}}
+{{page.invoice_payment_info}}
