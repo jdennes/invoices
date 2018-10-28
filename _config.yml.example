@@ -1,3 +1,4 @@
+future: true
 markdown: kramdown
 name: GitHub Invoices
 person_name: Your Name
