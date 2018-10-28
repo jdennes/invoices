@@ -14,6 +14,9 @@ last = DateTime.civil gen_date.year, gen_date.month, -1
 
 # Set the filename for the invoice's Markdown file
 filename = File.join(Dir.pwd, "_posts", last.strftime("%Y-%m-%d-invoice.markdown"))
+unless File.directory?(File.join(Dir.pwd, "_posts"))
+  FileUtils.mkdir_p(File.join(Dir.pwd, "_posts"))
+end
 
 # Set the filename for the invoice's PDF file
 pdfs_dir = File.join(Dir.pwd, "pdfs")
@@ -44,7 +47,7 @@ invoice_template = File.open(
   File.join(Dir.pwd, "invoice-template.md"), "r").read
 
 # Glue the monthly data and the invoice template together, and save the invoice.
-File.open(filename, "w") { |f| f.write(monthly_data + invoice_template) }
+File.open(filename, "w+") { |f| f.write(monthly_data + invoice_template) }
 
 # Build the site to include the new invoice
 system "bundle exec jekyll build --safe"
